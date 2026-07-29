@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PropEdge Realty – Find Your Perfect Property</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div> <img src="logo.jpeg" width="100" height="100" alt="Logo" /> </div>
+                <span class="logo-text">Raaja Rajeshwaari <span class="accent">Estates</span></span>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HOME / HERO -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Trusted Real Estate Partner</p>
+            <h1 class="hero-title">Find Your Dream<br /><span class="accent">Property</span> With Ease</h1>
+            <p class="hero-sub">From site visits to documentation — we handle every step of your property journey.</p>
+
+            <!-- SEARCH BAR -->
+            <div class="search-box">
+                <div class="search-tabs">
+                    <button class="stab active" data-tab="buy">Buy</button>
+                    <button class="stab" data-tab="rent">Rent</button>
+                    <button class="stab" data-tab="new">New Projects</button>
+                </div>
+                <div class="search-inputs">
+                    <div class="sinput">
+                        <i class="fa fa-map-marker-alt"></i>
+                        <input type="text" id="searchLocation" placeholder="City, locality or landmark..." />
+                    </div>
+                    <div class="sinput">
+                        <i class="fa fa-home"></i>
+                        <select id="searchType">
+                            <option value="">Property Type</option>
+                            <option>Apartment</option>
+                            <option>Villa</option>
+                            <option>Plot</option>
+                            <option>Commercial</option>
+                        </select>
+                    </div>
+                    <div class="sinput">
+                        <i class="fa fa-rupee-sign"></i>
+                        <select id="searchBudget">
+                            <option value="">Budget</option>
+                            <option>Under ₹30L</option>
+                            <option>₹30L – ₹60L</option>
+                            <option>₹60L – ₹1Cr</option>
+                            <option>Above ₹1Cr</option>
+                        </select>
+                    </div>
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fa fa-search"></i> Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEARCH RESULTS -->
+    <div class="search-results-section" id="searchResults" style="display:none;">
+        <div class="container">
+            <h2 class="section-title">Search Results <span id="resultCount"></span></h2>
+            <div class="properties-grid" id="resultsGrid"></div>
+        </div>
+    </div>
+
+    <!-- FEATURED PROPERTIES -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <p class="section-eyebrow">Hand-Picked Listings</p>
+            <h2 class="section-title">Featured <span class="accent">Properties</span></h2>
+            <div class="filter-row">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="apartment">Apartment</button>
+                <button class="filter-btn" data-filter="villa">Villa</button>
+                <button class="filter-btn" data-filter="plot">Plot</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+            </div>
+            <div class="properties-grid" id="propertiesGrid"></div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <p class="section-eyebrow">What We Offer</p>
+            <h2 class="section-title">Our <span class="accent">Services</span></h2>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-handshake"></i></div>
+                    <h3>Mandate Partner for Builders</h3>
+                    <p>We act as your exclusive mandate sales partner — managing site visits, client negotiations, and
+                        closing deals on behalf of builders with full transparency.</p>
+                    <ul class="service-list">
+                        <li>Exclusive project marketing</li>
+                        <li>End-to-end sales management</li>
+                        <li>Builder–buyer liaison</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-book-open"></i></div>
+                    <h3>Property Guide</h3>
+                    <p>First-time buyer or seasoned investor? Our experts walk you through every aspect of the market —
+                        from locality research to price negotiation strategies.</p>
+                    <ul class="service-list">
+                        <li>Locality analysis & insights</li>
+                        <li>Investment vs end-use advice</li>
+                        <li>Market trend reports</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-file-contract"></i></div>
+                    <h3>Documentation Process</h3>
+                    <p>We simplify property paperwork — from sale deeds and encumbrance certificates to khata transfers
+                        and registration assistance at the sub-registrar office.</p>
+                    <ul class="service-list">
+                        <li>Sale deed & agreement drafting</li>
+                        <li>EC & title verification</li>
+                        <li>Registration support</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-university"></i></div>
+                    <h3>Loan Process</h3>
+                    <p>We connect you with the best home loan offers across leading banks and NBFCs — handling the
+                        application, approvals, and disbursement coordination for you.</p>
+                    <ul class="service-list">
+                        <li>Bank comparison & selection</li>
+                        <li>Loan eligibility assessment</li>
+                        <li>End-to-end disbursement help</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="container about-grid">
+            <div class="about-img-wrap">
+                <div class="about-img-placeholder">
+                    <i class="fa fa-city"></i>
+                </div>
+                <div class="about-badge">
+                    <span class="badge-num">12+</span>
+                    <span class="badge-label">Years Experience</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <p class="section-eyebrow">Who We Are</p>
+                <h2 class="section-title">Bangalore's Most <span class="accent">Trusted</span> Property Partner</h2>
+                <p class="about-text">PropEdge Realty has been guiding home-buyers, investors, and builders across
+                    Bangalore since 2012. We believe real estate transactions should be transparent, stress-free, and
+                    rewarding — so we've built an end-to-end service that covers everything from your first site visit
+                    to the day you hold your keys.</p>
+                <div class="about-stats">
+                    <div class="stat"><span class="stat-num">2,400+</span><span class="stat-label">Properties
+                            Sold</span></div>
+                    <div class="stat"><span class="stat-num">180+</span><span class="stat-label">Builder Partners</span>
+                    </div>
+                    <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Client
+                            Satisfaction</span></div>
+                </div>
+                <a href="#contact" class="cta-btn">Talk to an Expert</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTY DETAIL MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box" id="modalBox">
+            <button class="modal-close" id="modalClose"><i class="fa fa-times"></i></button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <p class="section-eyebrow">Get In Touch</p>
+                <h2 class="section-title">Let's Find Your<br /><span class="accent">Perfect Property</span></h2>
+                <div class="cinfo-item"><i class="fa fa-envelope"></i><span>RaajaRajeshwariEstates@gmail.com</span>
+                </div>
+                <div class="cinfo-item"><i class="fa fa-phone"></i><span>+91 9591661725</span></div>
+                <div class="cinfo-item"><i class="fa fa-map-marker-alt"></i><span>Marathali , Bangalore – 560037</span>
+                </div>
+                <div class="social-row">
+                    <a href="#" class="soc"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="soc"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="soc"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="soc"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-wrap">
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <div class="form-group">
+                        <input type="text" id="fname" placeholder="Your Name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="femail" placeholder="Email Address" />
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="fphone" placeholder="Phone Number" />
+                    </div>
+                    <div class="form-group">
+                        <select id="fservice">
+                            <option value="">Interested In...</option>
+                            <option>Mandate Partner for Builders</option>
+                            <option>Property Guide</option>
+                            <option>Documentation Process</option>
+                            <option>Loan Process</option>
+                            <option>Buy / Sell Property</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="fmessage" rows="4" placeholder="Your message..."></textarea>
+                    </div>
+                    <button class="cta-btn full-btn" id="sendBtn">Send Message <i
+                            class="fa fa-paper-plane"></i></button>
+                    <p class="form-note" id="formNote"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon small"></div>
+                    <span class="logo-text">Raaja Rajeshwaari <span class="accent">Estates</span></span>
+                </div>
+                <p>Your trusted real estate partner in Bangalore. Transparent. Reliable. End-to-end.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="#services">Mandate Partner</a>
+                <a href="#services">Property Guide</a>
+                <a href="#services">Documentation</a>
+                <a href="#services">Loan Process</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Raaja Rajeshwaari Estates. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
